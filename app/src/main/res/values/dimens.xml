@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_space">8dp</dimen>
+    <dimen name="card_view_space">@dimen/default_space</dimen>
+    <dimen name="recycler_view_space">@dimen/default_space</dimen>
+    <dimen name="card_view_corner_radius">4dp</dimen>
+</resources>

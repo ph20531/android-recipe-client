@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/colorPrimary</item>
+        <item name="android:progressTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+
+    <style name="FloatingActionButton" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/colorControlHighlightDefault</item>
+        <item name="tint">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/circle</item>
+    </style>
+</resources>

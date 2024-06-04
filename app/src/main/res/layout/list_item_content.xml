@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/line_number"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="line_number"
+        android:gravity="right|center"
+        android:layout_gravity="right|top"
+        android:textStyle="italic"
+        android:textColor="@color/colorlineNumber"
+        android:layout_marginLeft="8dp"/>
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"/>
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/line_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="line_data"
+        android:gravity="left|center"
+        android:layout_gravity="left|center"
+        android:layout_marginRight="8dp"/>
+</LinearLayout>

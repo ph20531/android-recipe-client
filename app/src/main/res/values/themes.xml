@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="Base.Theme.Recipe" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="spinnerStyle">@style/spinnerStyle</item>
+        <item name="popupMenuStyle">@style/popupMenuStyle</item>
+    </style>
+
+    <style name="Theme.Recipe" parent="Base.Theme.Recipe" />
+
+    <style name="spinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+</resources>
