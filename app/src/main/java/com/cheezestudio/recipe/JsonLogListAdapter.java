@@ -20,7 +20,6 @@ import java.util.HashMap;
 public class JsonLogListAdapter extends BaseAdapter {
     private static final int TYPE_TITLE_TEXT = 0;
     private static final int TYPE_CONTENT_TEXT = 1;
-
     private Context context;
     private ArrayList<HashMap<String, String>> data;
     private LayoutInflater inflater;
@@ -87,7 +86,7 @@ public class JsonLogListAdapter extends BaseAdapter {
                 ClipData clipData = ClipData.newPlainText("clipBoard", plainText);
                 clipboardManager.setPrimaryClip(clipData);
 
-                Snackbar.make(view, "클립보드에 복사되었습니다.", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, R.string.clipboard, Snackbar.LENGTH_SHORT).show();
             });
         } else {
             TextView textView1 = convertView.findViewById(R.id.line_number);

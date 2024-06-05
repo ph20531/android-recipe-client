@@ -86,7 +86,7 @@ public class MainConsoleFragment extends Fragment {
             ClipData clipData = ClipData.newPlainText("clipBoard", plainText);
             clipboardManager.setPrimaryClip(clipData);
 
-            Snackbar.make(logView, "클립보드에 복사되었습니다.", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(logView, R.string.clipboard, Snackbar.LENGTH_SHORT).show();
         });
 
         jsonLogListAdapter = new JsonLogListAdapter(requireContext(), log);
@@ -224,7 +224,7 @@ public class MainConsoleFragment extends Fragment {
         try {
             apiRequest = loadData();
         } catch (Exception e) {
-            log("동기식 API 요청 실패", e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
+            log(getString(R.string.sync_request_failure), e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
             hideProgress();
             return;
         }
@@ -232,10 +232,10 @@ public class MainConsoleFragment extends Fragment {
         new Thread(() -> {
             try {
                 JSONObject response = client.makeAPIRequest(apiRequest, RequestType.SYNC);
-                log("동기식 API 요청 성공", response);
+                log(getString(R.string.sync_request_success), response);
                 hideProgress();
             } catch (Exception e) { // IOException | JSONException e
-                log("동기식 API 요청 실패", e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
+                log(getString(R.string.sync_request_failure), e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
                 hideProgress();
             }
         }).start();
@@ -250,7 +250,7 @@ public class MainConsoleFragment extends Fragment {
         try {
             apiRequest = loadData();
         } catch (Exception e) {
-            log("비동기식 API 요청 실패", e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
+            log(getString(R.string.async_request_failure), e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
             hideProgress();
             return;
         }
@@ -258,13 +258,13 @@ public class MainConsoleFragment extends Fragment {
         apiRequest.setOnAPIResponseListener(new OnAPIResponseListener() {
             @Override
             public void onSuccess(JSONObject response) {
-                log("비동기식 API 요청 성공", response);
+                log(getString(R.string.async_request_success), response);
                 hideProgress();
             }
 
             @Override
             public void onFailure(Exception e) {
-                log("비동기식 API 요청 실패", e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
+                log(getString(R.string.async_request_failure), e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
                 hideProgress();
             }
         });
@@ -272,7 +272,7 @@ public class MainConsoleFragment extends Fragment {
         try {
             client.makeAPIRequest(apiRequest, RequestType.ASYNC);
         } catch (Exception e) { // IOException | JSONException e
-            log("비동기식 API 요청 실패", e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
+            log(getString(R.string.async_request_failure), e.getClass().getName(), e.getMessage(), Arrays.toString(e.getStackTrace()));
             hideProgress();
         }
     }

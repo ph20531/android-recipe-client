@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">레시피</string>
+    <string name="app_name">Http 클라이언트</string>
     <string name="request">요청</string>
     <string name="progress">진행 중</string>
     <string name="copy_all">모두 복사</string>
@@ -27,4 +27,11 @@
     <string name="update">갱신</string>
     <string name="delete">삭제</string>
     <string name="copy">복사</string>
+    <string name="clipboard">클립보드에 복사되었습니다.</string>
+    <string name="sync_request_failure">동기식 API 요청 실패</string>
+    <string name="sync_request_success">동기식 API 요청 성공</string>
+    <string name="async_request_failure">비동기식 API 요청 실패</string>
+    <string name="async_request_success">비동기식 API 요청 성공</string>
+    <string name="pair_remove_confirm_message">정말로 해당 %s를 삭제하시겠습니까?</string>
+    <string name="pair_remove_message">해당 %s가 삭제되었습니다.</string>
 </resources>

@@ -80,11 +80,11 @@ class PairListAdapter extends RecyclerView.Adapter<PairListAdapter.ViewHolder> {
                         int negative = R.string.cancel;
                         AlertDialog.Builder builder = new AlertDialog.Builder(context);
                         builder.setTitle(title);
-                        builder.setMessage("정말로 해당 " + sType + "를 삭제하시겠습니까?");
+                        builder.setMessage(String.format(context.getString(R.string.pair_remove_confirm_message), sType));
                         builder.setPositiveButton(positive, (dialog, which) -> {
                             data.remove(position);
                             notifyItemRemoved(position);
-                            Snackbar.make(v, "해당 " + sType + "가 삭제되었습니다.", Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(v, String.format(context.getString(R.string.pair_remove_message), sType), Snackbar.LENGTH_SHORT).show();
                         });
                         builder.setNegativeButton(negative, (dialog, which) -> {
                             dialog.dismiss();
@@ -103,7 +103,7 @@ class PairListAdapter extends RecyclerView.Adapter<PairListAdapter.ViewHolder> {
                         ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
                         ClipData clipData = ClipData.newPlainText("clipBoard", plainText);
                         clipboard.setPrimaryClip(clipData);
-                        Snackbar.make(v, "클립보드에 복사되었습니다.", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(v, R.string.clipboard, Snackbar.LENGTH_SHORT).show();
                     }
 
                     return true;

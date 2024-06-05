@@ -17,7 +17,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- URL 입력 필드 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +46,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- 메소드 타입 설정 필드 -->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

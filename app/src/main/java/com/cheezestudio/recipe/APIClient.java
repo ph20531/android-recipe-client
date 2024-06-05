@@ -109,7 +109,6 @@ public class APIClient {
             case TRACE:
                 requestBuilder.method("TRACE", null);
                 break;
-            // 다른 HTTP 메서드도 필요에 따라 추가할 수 있습니다.
         }
 
         return requestBuilder.build();
