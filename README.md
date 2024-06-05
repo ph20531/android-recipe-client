@@ -1,2 +1,2 @@
 # Android Client Application
-- okhttp3 / rest full api
+- The okhttp3 library was used.
