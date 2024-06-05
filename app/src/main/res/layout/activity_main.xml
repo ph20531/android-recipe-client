@@ -58,6 +58,9 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/main_tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white" />
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@color/white"
+        android:clipToPadding="false"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextAppearance="@style/tabText" />
 </LinearLayout>

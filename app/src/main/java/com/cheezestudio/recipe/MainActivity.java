@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mainTabLayout.getTabAt(0).setIcon(R.drawable.outline_developer_board_24);
+        mainTabLayout.getTabAt(1).setIcon(R.drawable.outline_settings_input_component_24);
     }
 
     private void hideSystemBar() {

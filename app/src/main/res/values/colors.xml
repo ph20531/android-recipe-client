@@ -20,6 +20,10 @@
 <!--    <color name="colorPrimaryTranslucent">#1FFF1744</color>-->
 <!--    <color name="colorControlHighlight">#1FFF1744</color>-->
 
+<!--    <color name="colorPrimary">#FF651FFF</color>-->
+<!--    <color name="colorPrimaryTranslucent">#1F651FFF</color>-->
+<!--    <color name="colorControlHighlight">#1F651FFF</color>-->
+
     <color name="colorlineNumber">#00796B</color>
     <color name="colorkey">#D50000</color>
     <color name="colorValue">#304FFE</color>
